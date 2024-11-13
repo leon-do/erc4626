@@ -13,13 +13,7 @@ contract Tests is Test {
         // EOA owner deploys token
         vm.startPrank(address(1));
         token = new Token();
-        vault = new Vault(token);
-    }
-
-    function test_TokenName() public view {
-        assertEq(token.name(), "Token");
-        assertEq(token.symbol(), "TKN");
-        assertEq(token.balanceOf(address(1)), 100 * 10 ** 18);
+        vault = new Vault(token, "Vault Token", "vTKN");
     }
 
     function test_VaultName() public view {

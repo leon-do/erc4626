@@ -11,7 +11,8 @@ contract Deploy is Script {
     function run() public {
         vm.startBroadcast();
 
-        Vault vault = new Vault(IERC20(vm.envAddress("TOKEN_ADDRESS")));
+        Vault vault =
+            new Vault(IERC20(vm.envAddress("TOKEN_ADDRESS")), vm.envString("VAULT_NAME"), vm.envString("VAULT_SYMBOL"));
         console.log("Vault deployed to:", address(vault));
 
         vm.stopBroadcast();

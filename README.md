@@ -16,6 +16,8 @@
 
 ```shell
 export TOKEN_ADDRESS=0x2D5ee574e710219a521449679A4A7f2B43f046ad
+export VAULT_NAME="Vault Token"
+export VAULT_SYMBOL="vTKN"
 
 forge script script/Deploy.s.sol:Deploy \
 --rpc-url https://ethereum-sepolia-rpc.publicnode.com \
@@ -27,15 +29,15 @@ forge script script/Deploy.s.sol:Deploy \
 
 ```shell
 export ETHERSCAN_API_KEY=KQQ46P3VJZ4MCC7TVS8HZ43MZQNFAGFX6Y
-export VAULT_ADDRESS=0x3660D35487fe08bCBC0BB1Af6e7C011346A094cD
+export VAULT_ADDRESS=0x22ed0AD4e704608C7185bEA69e94c852da14747f
 
 forge verify-contract $VAULT_ADDRESS \
 --watch src/Vault.sol:Vault \
---constructor-args $TOKEN_ADDRESS \
---verifier-url https://eth-sepolia.blockscout.com/api
+--verifier-url https://eth-sepolia.blockscout.com/api \
+--constructor-args $TOKEN_ADDRESS
 ```
 
-https://eth-sepolia.blockscout.com/address/0x3660D35487fe08bCBC0BB1Af6e7C011346A094cD?tab=contract_code
+https://eth-sepolia.blockscout.com/address/0x22ed0AD4e704608C7185bEA69e94c852da14747f?tab=contract_code
 
 ### Build
 
