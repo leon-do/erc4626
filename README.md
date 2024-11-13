@@ -10,7 +10,9 @@
 
 ### Deploy
 
+```
 0x2F0eA3326979A025ef6F0A59F05523f319e88411
+```
 
 ```shell
 export TOKEN_ADDRESS=0x2D5ee574e710219a521449679A4A7f2B43f046ad
@@ -32,6 +34,8 @@ forge verify-contract $VAULT_ADDRESS \
 --constructor-args $TOKEN_ADDRESS \
 --verifier-url https://eth-sepolia.blockscout.com/api
 ```
+
+https://eth-sepolia.blockscout.com/address/0x3660D35487fe08bCBC0BB1Af6e7C011346A094cD?tab=contract_code
 
 ### Build
 
